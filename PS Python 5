@@ -1,0 +1,25 @@
+import math
+
+# Solicitar los coeficientes a, b y c
+a = float(input("Ingrese el coeficiente a: "))
+b = float(input("Ingrese el coeficiente b: "))
+c = float(input("Ingrese el coeficiente c: "))
+
+# Calcular el discriminante
+discriminante = math.pow(b, 2) - 4 * a * c
+
+# Verificar si el discriminante es negativo, cero o positivo
+if discriminante > 0:
+    # Dos soluciones reales
+    sol1 = (-b + math.sqrt(discriminante)) / (2 * a)
+    sol2 = (-b - math.sqrt(discriminante)) / (2 * a)
+    print(f"\nLas soluciones de la ecuación son: {sol1} y {sol2}")
+elif discriminante == 0:
+    # Una solución real
+    sol = -b / (2 * a)
+    print(f"\nLa solución de la ecuación es: {sol}")
+else:
+    # Soluciones complejas
+    real = -b / (2 * a)
+    imag = math.sqrt(-discriminante) / (2 * a)
+    print(f"\nLas soluciones de la ecuación son: {real} + {imag}i y {real} - {imag}i")

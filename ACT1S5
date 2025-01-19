@@ -1,0 +1,31 @@
+# Función para obtener los tres valores del usuario
+def obtener_valores():
+    valores = []
+    for i in range(3):
+        while True:
+            try:
+                valor = float(input(f"Ingrese el valor {i+1}: "))
+                valores.append(valor)
+                break
+            except ValueError:
+                print("Por favor, ingrese un número válido.")
+    return valores
+
+# Función principal
+def main():
+    # Obtener los valores
+    valores = obtener_valores()
+
+    # Ordenar los valores de menor a mayor
+    valores_ordenados = sorted(valores)
+
+    # Mostrar los valores ordenados
+    print("Valores ordenados de menor a mayor:", valores_ordenados)
+
+    # Mostrar el valor menor y el valor mayor
+    print("El valor menor es:", valores_ordenados[0])
+    print("El valor mayor es:", valores_ordenados[2])
+
+# Llamar a la función principal
+if __name__ == "__main__":
+    main()

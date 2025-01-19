@@ -1,0 +1,53 @@
+# Función para obtener las cuatro notas del estudiante
+def obtener_notas():
+    notas = []
+    for i in range(4):
+        while True:
+            try:
+                nota = float(input(f"Ingrese la nota {i+1} (0-10): "))
+                if 0 <= nota <= 10:
+                    notas.append(nota)
+                    break
+                else:
+                    print("Por favor, ingrese un número entre 0 y 10.")
+            except ValueError:
+                print("Por favor, ingrese un número válido.")
+    return notas
+
+# Función para calcular el promedio de las notas
+def calcular_promedio(notas):
+    return sum(notas) / len(notas)
+
+# Función para determinar la descripción según la calificación
+def determinar_descripcion(promedio):
+    if promedio == 10:
+        return "Matrícula de Honor"
+    elif promedio == 9:
+        return "Sobresaliente"
+    elif promedio in [7, 8]:
+        return "Notable"
+    elif promedio == 6:
+        return "Bien"
+    elif promedio == 5:
+        return "Aprobado"
+    else:
+        return "Suspenso"
+
+# Función principal
+def main():
+    # Obtener las notas del estudiante
+    notas = obtener_notas()
+
+    # Calcular el promedio de las notas
+    promedio = calcular_promedio(notas)
+
+    # Determinar la descripción según el promedio
+    descripcion = determinar_descripcion(promedio)
+
+    # Mostrar los resultados
+    print(f"Promedio: {promedio:.2f}")
+    print(f"Calificación: {descripcion}")
+
+# Llamar a la función principal
+if __name__ == "__main__":
+    main()

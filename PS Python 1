@@ -1,0 +1,14 @@
+# Solicitar la edad
+edad = int(input("Ingrese su edad: "))
+
+# Solicitar el sexo
+sexo = input("Ingrese su sexo (M/F): ")
+
+# Solicitar la altura en metros
+altura = float(input("Ingrese su altura en metros: "))
+
+# Imprimir los datos ingresados
+print("\nDatos de la persona:")
+print(f"Edad: {edad} años")
+print(f"Sexo: {sexo}")
+print(f"Altura: {altura} metros")

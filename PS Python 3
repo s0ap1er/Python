@@ -1,0 +1,10 @@
+# Solicitar las notas del alumno
+nota_practicas = float(input("Ingrese la nota de prácticas (30%): "))
+nota_teorica = float(input("Ingrese la nota teórica (60%): "))
+nota_participacion = float(input("Ingrese la nota de participación (10%): "))
+
+# Calcular la nota final ponderada
+nota_final = (nota_practicas * 0.30) + (nota_teorica * 0.60) + (nota_participacion * 0.10)
+
+# Imprimir la nota final
+print(f"\nLa nota final del alumno es: {nota_final}")

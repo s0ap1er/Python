@@ -1,0 +1,16 @@
+import math
+
+# Solicitar los valores de x e y
+x = float(input("Ingrese el valor de x: "))
+y = float(input("Ingrese el valor de y: "))
+
+# Calcular el valor de la función
+try:
+    numerador = math.sqrt(x)
+    denominador = math.pow(y, 2) - 1
+    if denominador == 0:
+        raise ValueError("El denominador es cero, lo que produce una división por cero.")
+    resultado = numerador / denominador
+    print(f"\nEl valor de la función f(x, y) es: {resultado}")
+except ValueError as e:
+    print(f"\nError: {e}")

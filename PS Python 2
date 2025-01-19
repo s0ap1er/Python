@@ -1,0 +1,11 @@
+# Solicitar las notas finales de cuatro alumnos
+nota1 = float(input("Ingrese la nota final del primer alumno: "))
+nota2 = float(input("Ingrese la nota final del segundo alumno: "))
+nota3 = float(input("Ingrese la nota final del tercer alumno: "))
+nota4 = float(input("Ingrese la nota final del cuarto alumno: "))
+
+# Calcular la nota final media
+nota_media = (nota1 + nota2 + nota3 + nota4) / 4
+
+# Imprimir la nota final media
+print(f"\nLa nota final media de los cuatro alumnos es: {nota_media}")
